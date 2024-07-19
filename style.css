@@ -3,9 +3,37 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: rgb(239, 244, 249);
+    background-color: rgb(16, 49, 129);
     margin-top: 6rem;
-    gap: 10rem;
+    gap: 8rem;
+}
+
+.button-count-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+    margin-top: 3rem;
+    background-color: rgb(235, 242, 247);
+    border-radius: 1.5rem;
+}
+
+.total-box {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.total-containers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 49, 129);
+    color: white;
+    border-radius: 1.5rem;
+    padding: 0rem .75rem;
 }
 
 #testButton {
@@ -24,17 +52,38 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: white;
-    margin-top: 8rem;
+    background-color: rgb(235, 242, 247);
+    border-radius: 1.5rem;
+    height: 20rem;;
     width: 20rem;
 }
 
 #feedback-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 20rem;;
+    overflow-y: scroll;
+    background-color: rgb(235, 242, 247);
 }
 
 #asking-container {
     display: flex;
     flex-direction: column;
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 20rem;
+    img {
+        border-radius: 1.5rem;
+    }
+
+}
+
+#mom-says {
+    background-color: rgb(235, 242, 247);
+    border-radius: 1.5rem;
+    padding: 1.25rem;
 }

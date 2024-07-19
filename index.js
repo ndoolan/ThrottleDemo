@@ -1,9 +1,12 @@
 const totalRequests = document.getElementById("total-requests");
 const totalReceived = document.getElementById("total-received");
+const feedback = document.getElementById("feedback-container");
+
 let reqCount = parseInt(totalRequests.innerText);
 let receiveCount = parseInt(totalReceived.innerText);
 
 const throttle = (f, t) => {
+
     let ready = true;
     let asked = false;
 
@@ -11,13 +14,23 @@ const throttle = (f, t) => {
         reqCount++;
         totalRequests.innerText = reqCount;
 
+        if(reqCount > 30){
+            console.log('inside the coutner')
+            const scold = document.createElement('p');
+            scold.innerText = "BRO CHILL!";
+            scold.style.color = "red";
+            feedback.appendChild(scold)
+        }
+
+
         if (ready) receiveCake();
         else {
             asked = true
-            const feedback = document.getElementById("feedback-container");
-            const dialogue = document.createElement('p');
-            dialogue.innerText = "Literally cutting you a piece right now..."
-            feedback.appendChild(dialogue)
+            if(reqCount < 30){
+                const dialogue = document.createElement('p');
+                dialogue.innerText = "Literally cutting you a piece right now..."
+                feedback.appendChild(dialogue)
+            }
         };
     };
 
