@@ -1,10 +1,11 @@
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgb(239, 244, 249);
     margin-top: 6rem;
+    gap: 10rem;
 }
 
 #testButton {
@@ -21,9 +22,19 @@ body {
 
 #cake-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     background-color: white;
     margin-top: 8rem;
     width: 20rem;
+}
+
+#feedback-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#asking-container {
+    display: flex;
+    flex-direction: column;
 }

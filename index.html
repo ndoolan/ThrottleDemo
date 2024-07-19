@@ -4,65 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+  
     <title>Throttle</title>
 </head>
 <body>
-    <button id="testButton">Cake Please!</button>
-    <div id="cake-container"></div>
-    <div id="feedback">
+    <div id="feedback-container">
         <p>Your Mom Says:</p>
     </div>
-    <script>
-        const throttle = (f, t) => {
-            let ready = true;
-            let asked = false;
-
-            return () => {
-                if(!ready){
-                    const feedback = document.getElementById("feedback");
-                    const dialogue = document.createElement('p');
-                    dialogue.innerText = "You literally just had a piece"
-                    feedback.appendChild(dialogue)
-                }
-                if (ready) receiveCake();
-                else asked = true;
-            };
-
-            function receiveCake() {
-
-                ready = false;
-                asked = false;
-
-
-                setTimeout(() => {
-                    if (asked) receiveCake();
-                    else ready = true;
-                }, t);
-
-                f();
-            }
-        };
-
-        // Test function to be throttled
-        const testFunction = () => {
-            const cakeContainer = document.getElementById("cake-container")
-            const cake = document.createElement('img');
-            cake.src = "assests/pink-cake-slice.jpg"
-            cake.style.width = "4em";
-            cake.style.height = "4em";
-            cake.style.borderRadius = "1em";
-            cake.style.margin = ".5em";
-
-            
-            cakeContainer.appendChild(cake);
-            console.log("Function executed at", new Date().toLocaleTimeString());
-        };
-
-        // Create a throttled version of the test function
-        const throttledFunction = throttle(testFunction, 2000);
-
-        // Attach throttled function to button click event
-        document.getElementById("testButton").addEventListener("click", throttledFunction);
-    </script>
+    <div id="asking-container">
+        <img src="./assests/AskingForCake.jpeg" alt="Child Asking Parent for Cake Picture">
+        <button id="testButton">Cake Please!</button>
+        <p>Total Requests</p>
+        <p id="total-requests">0</p>
+        <p>Total Received</p>
+        <p id="total-received">0</p>
+    </div>
+    <div id="cake-container"></div>
+    <script src="index.js"></script>
 </body>
 </html>
