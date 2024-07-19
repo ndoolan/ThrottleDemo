@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Throttle</title>
 </head>
 <body>
-    <button id="testButton">Click Me!</button>
+    <button id="testButton">Cake Please!</button>
+    <div id="cake-container"></div>
     <script>
         const throttle = (f, t) => {
             let ready = true;
@@ -32,6 +34,16 @@
 
         // Test function to be throttled
         const testFunction = () => {
+            const cakeContainer = document.getElementById("cake-container")
+            const cake = document.createElement('img');
+            cake.src = "assests/pink-cake-slice.jpg"
+            cake.style.width = "4em";
+            cake.style.height = "4em";
+            cake.style.borderRadius = "1em";
+            cake.style.margin = ".5em";
+
+            
+            cakeContainer.appendChild(cake);
             console.log("Function executed at", new Date().toLocaleTimeString());
         };
 
