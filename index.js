@@ -22,8 +22,8 @@ const throttle = (f, t) => {
             feedback.appendChild(scold)
         }
 
-
         if (ready) receiveCake();
+
         else {
             asked = true
             if(reqCount < 30){
@@ -53,7 +53,7 @@ const throttle = (f, t) => {
     }
 };
 
-// Test function to be throttled
+// Serve Cake 
 const serveCake = () => {
     const cakeContainer = document.getElementById("cake-container")
     const cake = document.createElement('img');
