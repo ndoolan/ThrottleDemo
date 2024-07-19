@@ -9,19 +9,30 @@
 <body>
     <button id="testButton">Cake Please!</button>
     <div id="cake-container"></div>
+    <div id="feedback">
+        <p>Your Mom Says:</p>
+    </div>
     <script>
         const throttle = (f, t) => {
             let ready = true;
             let asked = false;
 
             return () => {
+                if(!ready){
+                    const feedback = document.getElementById("feedback");
+                    const dialogue = document.createElement('p');
+                    dialogue.innerText = "You literally just had a piece"
+                    feedback.appendChild(dialogue)
+                }
                 if (ready) receiveCake();
                 else asked = true;
             };
 
             function receiveCake() {
+
                 ready = false;
                 asked = false;
+
 
                 setTimeout(() => {
                     if (asked) receiveCake();
