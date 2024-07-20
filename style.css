@@ -1,4 +1,16 @@
 body {
+    background-color: rgb(16, 49, 129);
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        font-size: 5rem;
+        color: white;
+    }
+}
+
+main {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,6 +48,48 @@ body {
   padding: 0rem 0.75rem;
 }
 
+
+#cake-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(235, 242, 247);
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 20rem;
+}
+
+#feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 20rem;
+    overflow-y: scroll;
+    background-color: rgb(235, 242, 247);
+}
+
+#asking-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    height: 20rem;
+    width: 20rem;
+    img {
+        border-radius: 1.5rem;
+    }
+}
+
+#mom-says {
+    background-color: rgb(235, 242, 247);
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+    font-size: 2rem;
+}
+
+
 #testButton {
   display: flex;
   align-items: center;
@@ -47,43 +101,20 @@ body {
   border-radius: 1.5rem;
   width: 6rem;
   height: 6rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
 }
 
-#cake-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: rgb(235, 242, 247);
-  border-radius: 1.5rem;
-  height: 20rem;
-  width: 20rem;
+#testButton:active {
+    transform: scale(0.95);
 }
 
-#feedback-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.5rem;
-  height: 20rem;
-  width: 20rem;
-  overflow-y: scroll;
-  background-color: rgb(235, 242, 247);
+@keyframes clickEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
 }
 
-#asking-container {
-  display: flex;
-  flex-direction: column;
-  border-radius: 1.5rem;
-  height: 20rem;
-  width: 20rem;
-  img {
-    border-radius: 1.5rem;
-  }
-}
-
-#mom-says {
-  background-color: rgb(235, 242, 247);
-  border-radius: 1.5rem;
-  padding: 1.25rem;
+.clicked {
+    animation: clickEffect 0.2s;
 }
