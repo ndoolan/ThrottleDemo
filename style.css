@@ -1,89 +1,89 @@
 body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(16, 49, 129);
-    margin-top: 6rem;
-    gap: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(16, 49, 129);
+  margin-top: 6rem;
+  gap: 8rem;
 }
 
 .button-count-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    padding: 1rem;
-    margin-top: 3rem;
-    background-color: rgb(235, 242, 247);
-    border-radius: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  margin-top: 3rem;
+  background-color: rgb(235, 242, 247);
+  border-radius: 1.5rem;
 }
 
 .total-box {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .total-containers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(15, 49, 129);
-    color: white;
-    border-radius: 1.5rem;
-    padding: 0rem .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0994eb;
+  color: white;
+  border-radius: 1.5rem;
+  padding: 0rem 0.75rem;
 }
 
 #testButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.25rem;
-    color: white;
-    background-color: rgb(15, 49, 129);
-    border-radius: 1.5rem;
-    width: 5rem;
-    height: 4rem;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  color: white;
+  background-color: #0994eb;
+  border: none;
+  border-radius: 1.5rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 #cake-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: rgb(235, 242, 247);
-    border-radius: 1.5rem;
-    height: 20rem;;
-    width: 20rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(235, 242, 247);
+  border-radius: 1.5rem;
+  height: 20rem;
+  width: 20rem;
 }
 
 #feedback-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1.5rem;
-    height: 20rem;
-    width: 20rem;;
-    overflow-y: scroll;
-    background-color: rgb(235, 242, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  height: 20rem;
+  width: 20rem;
+  overflow-y: scroll;
+  background-color: rgb(235, 242, 247);
 }
 
 #asking-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  height: 20rem;
+  width: 20rem;
+  img {
     border-radius: 1.5rem;
-    height: 20rem;
-    width: 20rem;
-    img {
-        border-radius: 1.5rem;
-    }
-
+  }
 }
 
 #mom-says {
-    background-color: rgb(235, 242, 247);
-    border-radius: 1.5rem;
-    padding: 1.25rem;
+  background-color: rgb(235, 242, 247);
+  border-radius: 1.5rem;
+  padding: 1.25rem;
 }
